@@ -14,6 +14,7 @@ class AuthenticateUser
 
     def user
         user = User.find_by(email: email)
+        #binding.pry
         return user if user && user.authenticate(password)
     end
 end
